@@ -12,15 +12,16 @@ for i in range(5):
     cant = 0
     sigue = 1
     while sigue == 1:
-        si = input('¿Cuantas respondio por si?         ')
-        no = input('¿Cuantas respondio por no?      ')
+        si = int(input('¿Cuantas respondio por si?         '))
+        no = int(input('¿Cuantas respondio por no?      '))
 
-        if((si + no)== 4):
-            cant = si + no  
+        if((si + no)):
+            cant = si + no
+            print(cant)  
         si = 0
         no = 0
-        sigue = input('Sigue encuestando?  Si = 1      ') 
-    print('Total de encuestados',i,':',cant)
+        sigue = int(input('Sigue encuestando?  Si = 1      ')) 
+    print('Total de encuestados en la ciudad Numero:',i+1,':',cant)
     total = total + cant
-print('Total de encuestados:', total)
+print('Total de encuestados entre todas las ciudades:', total)
 
